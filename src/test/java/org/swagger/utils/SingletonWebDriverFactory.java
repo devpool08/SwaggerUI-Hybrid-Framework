@@ -7,7 +7,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class SingletonWebDriverFactory {
     private static volatile SingletonWebDriverFactory factory;
-    private static final ThreadLocal<WebDriver> local = new ThreadLocal<WebDriver>();
+    private static final ThreadLocal<WebDriver> local = new ThreadLocal<>();
 
     private SingletonWebDriverFactory() {
     }

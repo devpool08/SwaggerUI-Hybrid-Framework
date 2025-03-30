@@ -42,3 +42,6 @@ xmls/testng.xml
 !/src/test/resources/
 !/src/test/resources/config.properties
 !/src/test/resources/log4j2.xml
+!/reports/
+!/screenshots/
+!/src/test/resources/

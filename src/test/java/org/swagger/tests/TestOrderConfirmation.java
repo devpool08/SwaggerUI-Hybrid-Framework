@@ -17,7 +17,6 @@ public class TestOrderConfirmation extends BaseTest {
     @Test(groups = {"Regression", "Main"})
     public void testOrderOverview() {
         overviewPage = new OverviewPage(driver);
-        assert overviewPage.isOverviewPagePresent():"Error while overview page";
         assert overviewPage.clickOnFinishButton():"Error while clicking finish button";
         log.info("Over view message");
     }

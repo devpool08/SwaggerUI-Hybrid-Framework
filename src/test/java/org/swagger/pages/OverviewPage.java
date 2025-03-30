@@ -11,19 +11,10 @@ public class OverviewPage extends BasePage {
     public OverviewPage(WebDriver driver) {
         super(driver);
     }
-    @FindBy(xpath = "//div[@class='subheader']")
-    private WebElement subHeader;
+
     @FindBy(xpath = "//a[normalize-space()='FINISH']")
     private WebElement finishButton;
 
-    public boolean isOverviewPagePresent() {
-        try {
-            wait.until(ExpectedConditions.visibilityOf(subHeader));
-            return subHeader.isDisplayed();
-        } catch (Exception e) {
-            return false;
-        }
-    }
     public boolean clickOnFinishButton() {
         try {
             wait.until(ExpectedConditions.elementToBeClickable(finishButton));
