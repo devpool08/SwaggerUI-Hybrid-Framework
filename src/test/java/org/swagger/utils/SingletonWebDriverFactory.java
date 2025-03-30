@@ -24,7 +24,7 @@ public class SingletonWebDriverFactory {
                 local.set(new EdgeDriver());
                 break;
             default:
-                throw new IllegalArgumentException("Invalid browser name");
+                throw new InvalidWebDriverException("Invalid browser name: " + browser);
         }
     }
 
