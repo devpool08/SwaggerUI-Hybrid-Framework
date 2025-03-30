@@ -8,7 +8,7 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import java.io.FileInputStream;
-@SuppressWarnings("unused")
+@SuppressWarnings({"FieldCanBeLocal", "unused","FieldMayBeFinal"})
 public class ExcelUtilities {
     private FileInputStream fileInputStream;
     private XSSFWorkbook xssfWorkbook;
