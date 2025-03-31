@@ -4,8 +4,10 @@ import lombok.extern.log4j.Log4j2;
 import org.swagger.base.BaseTest;
 import org.swagger.pages.InventoryPage;
 import org.swagger.pages.LoginPage;
-import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 @Log4j2
 @SuppressWarnings("all")
@@ -21,16 +23,16 @@ public class TestLogin extends BaseTest {
         System.out.println("Inside testInputCredential");
         log.info("input credential section");
         LoginPage loginPage = new LoginPage(driver);
-        Assert.assertTrue(loginPage.inputUserName(properties.getProperty("VALID_USER_NAME")), "Error While Entering User Name");
-        Assert.assertTrue(loginPage.inputPassword(properties.getProperty("VALID_PASSWORD")), "Error While Entering Password");
-        Assert.assertTrue(loginPage.clickEnter(), "Error while clicking Login Button");
+        assertTrue(loginPage.inputUserName(properties.getProperty("VALID_USER_NAME")), "Error While Entering User Name");
+        assertTrue(loginPage.inputPassword(properties.getProperty("VALID_PASSWORD")), "Error While Entering Password");
+        assertTrue(loginPage.clickEnter(), "Error while clicking Login Button");
         log.info("Successfully entered credentials");
     }
 
     @Test(dependsOnMethods = "testInputCredentials",groups = {"Sanitty","Main"})
     public void testVerifyLogin() {
         InventoryPage inventoryPage = new InventoryPage(driver);
-        Assert.assertEquals(inventoryPage.getLabel(), "Products");
+        assertEquals(inventoryPage.getLabel(), "Products");
         log.info("Successfully logged in and navigated to the inventory page");
     }
     @SuppressWarnings("java.lang.AssertionError")
@@ -38,7 +40,7 @@ public class TestLogin extends BaseTest {
     public void testDemoForFailing() {
         InventoryPage inventoryPage = new InventoryPage(driver);
         //noinspection AssertionFailureIgnored
-        Assert.assertEquals(inventoryPage.getLabel(), "Products ");
+        assertEquals(inventoryPage.getLabel(), "Products ");
         log.error("Test failed due to incorrect label intentionally");
     }
     @Test(dependsOnMethods = "testDemoForFailing",groups = {"Sanitty","Main"})

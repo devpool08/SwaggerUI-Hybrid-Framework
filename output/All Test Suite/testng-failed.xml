@@ -7,6 +7,17 @@
   <test thread-count="2" name="Firefox Testing(failed)">
     <parameter name="browser" value="firefox"/>
     <classes>
+      <class name="org.swagger.tests.TestCheckOutForm">
+        <methods>
+          <include name="demoTestForFailing"/>
+          <include name="demoTestForSkip2"/>
+          <include name="tearDown"/>
+          <include name="verifyCheckoutPage"/>
+          <include name="validateInputCredentials"/>
+          <include name="setUp"/>
+          <include name="demoTestForSkip"/>
+        </methods>
+      </class> <!-- org.swagger.tests.TestCheckOutForm -->
       <class name="org.swagger.tests.TestLogin">
         <methods>
           <include name="tearDown"/>
@@ -19,22 +30,22 @@
           <include name="testDemoForFailing"/>
         </methods>
       </class> <!-- org.swagger.tests.TestLogin -->
-      <class name="org.swagger.tests.TestCheckOutForm">
-        <methods>
-          <include name="demoTestForFailing"/>
-          <include name="demoTestForSkip2"/>
-          <include name="tearDown"/>
-          <include name="verifyCheckoutPage"/>
-          <include name="validateInputCredentials"/>
-          <include name="setUp"/>
-          <include name="demoTestForSkip"/>
-        </methods>
-      </class> <!-- org.swagger.tests.TestCheckOutForm -->
     </classes>
   </test> <!-- Firefox Testing(failed) -->
   <test thread-count="2" name="Chrome Testing(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
+      <class name="org.swagger.tests.TestCheckOutForm">
+        <methods>
+          <include name="demoTestForFailing"/>
+          <include name="demoTestForSkip2"/>
+          <include name="tearDown"/>
+          <include name="verifyCheckoutPage"/>
+          <include name="validateInputCredentials"/>
+          <include name="setUp"/>
+          <include name="demoTestForSkip"/>
+        </methods>
+      </class> <!-- org.swagger.tests.TestCheckOutForm -->
       <class name="org.swagger.tests.TestLogin">
         <methods>
           <include name="tearDown"/>
@@ -47,22 +58,22 @@
           <include name="testDemoForFailing"/>
         </methods>
       </class> <!-- org.swagger.tests.TestLogin -->
-      <class name="org.swagger.tests.TestCheckOutForm">
-        <methods>
-          <include name="demoTestForFailing"/>
-          <include name="demoTestForSkip2"/>
-          <include name="tearDown"/>
-          <include name="verifyCheckoutPage"/>
-          <include name="validateInputCredentials"/>
-          <include name="setUp"/>
-          <include name="demoTestForSkip"/>
-        </methods>
-      </class> <!-- org.swagger.tests.TestCheckOutForm -->
     </classes>
   </test> <!-- Chrome Testing(failed) -->
   <test thread-count="2" name="Edge Testing(failed)">
     <parameter name="browser" value="edge"/>
     <classes>
+      <class name="org.swagger.tests.TestCheckOutForm">
+        <methods>
+          <include name="demoTestForFailing"/>
+          <include name="demoTestForSkip2"/>
+          <include name="tearDown"/>
+          <include name="verifyCheckoutPage"/>
+          <include name="validateInputCredentials"/>
+          <include name="setUp"/>
+          <include name="demoTestForSkip"/>
+        </methods>
+      </class> <!-- org.swagger.tests.TestCheckOutForm -->
       <class name="org.swagger.tests.TestLogin">
         <methods>
           <include name="tearDown"/>
@@ -75,17 +86,6 @@
           <include name="testDemoForFailing"/>
         </methods>
       </class> <!-- org.swagger.tests.TestLogin -->
-      <class name="org.swagger.tests.TestCheckOutForm">
-        <methods>
-          <include name="demoTestForFailing"/>
-          <include name="demoTestForSkip2"/>
-          <include name="tearDown"/>
-          <include name="verifyCheckoutPage"/>
-          <include name="validateInputCredentials"/>
-          <include name="setUp"/>
-          <include name="demoTestForSkip"/>
-        </methods>
-      </class> <!-- org.swagger.tests.TestCheckOutForm -->
     </classes>
   </test> <!-- Edge Testing(failed) -->
 </suite> <!-- Failed suite [All Test Suite] -->
