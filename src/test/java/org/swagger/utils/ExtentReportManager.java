@@ -82,14 +82,14 @@ public class ExtentReportManager implements ITestListener {
 
         reporter = new ExtentReports();
         reporter.attachReporter(sparkReporter);
-        reporter.setSystemInfo("Applications", "opencart");
+        reporter.setSystemInfo("Applications", "SwagLab");
         reporter.setSystemInfo("Module", "Admin");
         reporter.setSystemInfo("Environment", "QA");
         reporter.setSystemInfo("Tester", "Debadatta");
         reporter.setSystemInfo("User Name", System.getProperty("user.name"));
 
         String os = context.getCurrentXmlTest().getParameter("os");
-        reporter.setSystemInfo("Operating System", os);
+        reporter.setSystemInfo("Operating System", "Windows");
 
         String browser = context.getCurrentXmlTest().getParameter("browser");
         reporter.setSystemInfo("Browser", browser);
