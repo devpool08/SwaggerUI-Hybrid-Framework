@@ -49,7 +49,6 @@ public class ExtentReportManager implements ITestListener {
         test.log(Status.FAIL, "Test  " + result.getName() + " failed due to: " + result.getThrowable());
         try {
             BaseTest obj = (BaseTest) result.getInstance();
-
             System.out.println("---------------" + result.getInstance().toString());
             String imgPath = obj.captureScreenshot(result.getName());
             test.addScreenCaptureFromPath(imgPath);
@@ -76,8 +75,8 @@ public class ExtentReportManager implements ITestListener {
         String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
         reportName = "Test-Report-" + timeStamp + ".html";
         sparkReporter = new ExtentSparkReporter(".\\reports\\" + reportName);
-        sparkReporter.config().setDocumentTitle("opencartDemoReport");
-        sparkReporter.config().setReportName("opencart Functional Testing");
+        sparkReporter.config().setDocumentTitle("SwagLab Test Automation Report");
+        sparkReporter.config().setReportName("SwagLab Functional Testing");
         sparkReporter.config().setTheme(Theme.DARK);
 
         reporter = new ExtentReports();
@@ -86,15 +85,10 @@ public class ExtentReportManager implements ITestListener {
         reporter.setSystemInfo("Module", "Admin");
         reporter.setSystemInfo("Environment", "QA");
         reporter.setSystemInfo("Tester", "Debadatta");
-        reporter.setSystemInfo("User Name", System.getProperty("user.name"));
-
         String os = context.getCurrentXmlTest().getParameter("os");
         reporter.setSystemInfo("Operating System", "Windows");
-
         String browser = context.getCurrentXmlTest().getParameter("browser");
         reporter.setSystemInfo("Browser", browser);
-
-
     }
 
     @Override
