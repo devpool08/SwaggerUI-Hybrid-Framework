@@ -21,9 +21,9 @@ import java.util.Properties;
 public class BaseTest {
     protected WebDriver driver;
     protected static SingletonWebDriverFactory factory;
-    public Properties properties;
-    public FileReader reader;
-    public String browserName;
+    protected Properties properties;
+    protected FileReader reader;
+    protected String browserName;
 
     @SneakyThrows
     @BeforeClass

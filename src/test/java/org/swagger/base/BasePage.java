@@ -1,10 +1,11 @@
 package org.swagger.base;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.Duration;
+
+import static java.time.Duration.ofSeconds;
+import static org.openqa.selenium.support.PageFactory.initElements;
 
 public class BasePage {
     protected WebDriver driver;
@@ -12,7 +13,7 @@ public class BasePage {
 
     protected BasePage(WebDriver driver){
         this.driver=driver;
-        wait=new WebDriverWait(driver, Duration.ofSeconds(30));
-        PageFactory.initElements(driver,this);
+        wait=new WebDriverWait(driver, ofSeconds(30));
+        initElements(driver,this);
     }
 }
